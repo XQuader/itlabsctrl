@@ -1,2 +1,2 @@
-Релиз расположен по адресу http://xquader.github.io/itlabsctrl/
-Система организации проведения и проверки лабораторных работ по программированию (Front-end)
+# [IT Labs Control](http://xquader.github.io/itlabsctrl/)
+IT Labs Control is an online judge system for organization and validation of laboratory works in programming.
