@@ -1,10 +1,6 @@
 (function(angular) {
   'use strict';
-  angular.module('loginPage', [])
-  .controller('loginCtrl as login', function() {
-	  
-  })
-
-
+  angular.module('ItLabsControl', [])
+  
 
 })(window.angular);

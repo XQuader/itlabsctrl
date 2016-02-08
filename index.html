@@ -1,16 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Login page</title>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js"></script>
-  <script src="js/app.js"></script>
-</head>
-<body ng-app="loginPage">
-	<form ng-submit="login.submit(info.name)">
-		<div><input type="textarea" ng-model="info.name"></div>
-		<div><input type="password" ng-model="info.password"></div>
-		<button type="submit">Submit</button>
-	</form>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IT Labs Control</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
+	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="vendors/html5shiv/html5shiv.min.js"></script>
+      <script src="vendors/respond/respond.js"></script>
+    <![endif]-->
+	
+    <script src="vendors/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="ItLabsControl">
+    <h1>List of teachers!</h1>
+    <input type="text" ng-model="user.name">
+    <span ng-bind="user.name"></span>
+
+    <script src="vendors/jquery/jquery.js"></script>
+    <script src="vendors/js/bootstrap.js"></script>
+  </body>
 </html>
