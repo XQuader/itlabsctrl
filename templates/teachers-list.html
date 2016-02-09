@@ -1,5 +1,18 @@
-<ul>
-    <li ng-repeat="element in list">
-        <span class="badge">{{element.firstName + " " + element.lastName}}</span>
-    </li>
-</ul>
+<div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="element in list">
+                    <td>{{element.firstName}}</td>
+                    <td>{{element.lastName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
