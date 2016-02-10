@@ -1,15 +1,15 @@
 [{
   "firstName": "Maxim",
   "lastName": "Matush",
-  "subjects": []
+  "subjects": ["OSiSP", "OOP"]
 },
 {
   "firstName": "Serhey",
   "lastName": "Suharev",
-  "subjects": []
+  "subjects": ["PDI", "SYARD", "YAP"]
 },
 {
   "firstName": "Serhey",
   "lastName": "Kuhta",
-  "subjects": []
+  "subjects": ["SiAOD", "OOP"]
 }]
