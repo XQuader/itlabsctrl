@@ -4,10 +4,10 @@
     .config(function($routeProvider) {
       $routeProvider
         .when('/index', {
-          'templateUrl':  'templates/index.html'
+          'templateUrl':  'src/index.html'
         })
         .when('/teacher/:id', {
-          templateUrl: 'templates/teachers/teacher-detail.html',
+          templateUrl: 'src/teachers/teacher-detail.html',
           controller: 'TeacherDetailCtrl'
         })
         .otherwise({

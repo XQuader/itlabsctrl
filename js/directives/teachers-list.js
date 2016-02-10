@@ -8,7 +8,7 @@
           click: '='
         },
         restrict: 'E',
-        templateUrl: 'templates/teachers/teachers-list.html',
+        templateUrl: 'src/teachers/teachers-list.html',
       };
     })
 })(window.angular);

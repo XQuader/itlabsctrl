@@ -27,18 +27,10 @@
 
     <script src="js/directives/directives.module.js"></script>
     <script src="js/directives/teachers-list.js"></script>
+    <script src="js/directives/navbar.js"></script>
   </head>
   <body ng-app="itLabsControl">
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#/index">Home</a></li>
-            <li><a href="#/fakeurl">Unknown link</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+    <navbar></navbar>
     <div ng-view></div>
 
     <script src="vendors/jquery/jquery.js"></script>
