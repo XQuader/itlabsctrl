@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>IT Labs Control</title>
 
     <link href="vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -16,8 +16,10 @@
     <![endif]-->
 	
     <script src="vendors/angular/angular.js"></script>
+    <script src="vendors/angular/angular-route.js"></script>
 
     <script src="js/app.js"></script>
+    <script src="js/app.routes.js"></script>
 
     <script src="js/teachers/teachers.module.js"></script>
     <script src="js/teachers/teachers.service.js"></script>
@@ -25,11 +27,11 @@
 
     <script src="js/directives/directives.module.js"></script>
     <script src="js/directives/teachers-list.js"></script>
+    <script src="js/directives/navbar.js"></script>
   </head>
   <body ng-app="itLabsControl">
-    <div ng-controller="TeachersController">
-      <teachers-list list="teachers"></teachers-list>
-    </div>
+    <navbar></navbar>
+    <div ng-view></div>
 
     <script src="vendors/jquery/jquery.js"></script>
     <script src="vendors/bootstrap/js/bootstrap.js"></script>

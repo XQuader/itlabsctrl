@@ -4,10 +4,11 @@
     .directive('teachersList', function() {
       return {
         scope: {
-          list: '='
+          list: '=',
+          click: '='
         },
         restrict: 'E',
-        templateUrl: 'templates/teachers-list.html',
+        templateUrl: 'src/teachers/teachers-list.html',
       };
     })
 })(window.angular);
