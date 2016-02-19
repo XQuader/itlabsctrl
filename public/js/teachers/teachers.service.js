@@ -8,9 +8,10 @@
           if (promise)
             return promise;
 
-          promise = $http.get('api/teachers.json');
+          promise = $http.get('api/teachers');
           return promise;
         }
       };
     }])
 })(window.angular);
+

@@ -1,5 +1,8 @@
 .idea/*
 .idea\*
-miniweb.exe
+*/.idea/*
+*/.idea\*
 node_modules/*
 node_modules\*
+*/node_modules/*
+*/node_modules\*
