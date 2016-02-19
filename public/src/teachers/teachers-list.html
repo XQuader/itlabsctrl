@@ -9,7 +9,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="element in list" ng-click="click($index)">
+                <tr ng-repeat="element in list" ng-click="click(element.id)">
                     <td>{{$index + 1}}</td>
                     <td>{{element.first_name}}</td>
                     <td>{{element.last_name}}</td>

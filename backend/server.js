@@ -14,13 +14,32 @@ var router = express.Router();
 
 router.get('/teachers', function(req, res) {
   console.log('Called GET teachers');
-  db.any("select first_name, last_name from person")
+  db.any("select id, first_name, last_name from person")
     .then(function (data) {
+      console.log(data);
       res.json(data);
     })
     .catch(function (error) {
+      console.log(error);
       res.end(error);
     });
+});
+
+router.get('/teacher/:id', function(req, res) {
+  "use strict";
+  console.log('Called GET teacher details');
+  db.any("select subject.name from person_subject " +
+         "inner join subject on (subject.id = person_subject.subject)" +
+                             "and ($1 = person_subject.person)", req.params.id)
+    .then(function (data) {
+      console.log(data);
+      res.json(data);
+    })
+    .catch(function (error) {
+      console.log(error);
+      res.end(error);
+    });
+
 });
 
 

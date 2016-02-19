@@ -11,9 +11,8 @@
     }])
 
     .controller('TeacherDetailCtrl', ['$scope', '$routeParams', 'Teachers', function($scope, $routeParams, Teachers) {
-      $scope.teacherId = $routeParams.id;
-      Teachers.getTeachers().then(function(response) {
-        $scope.teacher = response.data[$scope.teacherId];
+      Teachers.getTeacherSubjects($routeParams.id).then(function(response) {
+        $scope.subjects = response.data;
       });
     }]);
 })(window.angular);

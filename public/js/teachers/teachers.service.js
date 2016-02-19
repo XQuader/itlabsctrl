@@ -2,16 +2,21 @@
   'use strict';
   angular.module('itLabsControl.teachers')
     .service('Teachers', ['$http', function($http) {
-      var promise = null;
-      return {
-        getTeachers: function() {
-          if (promise)
-            return promise;
+      var teachers = null;
 
-          promise = $http.get('api/teachers');
-          return promise;
-        }
+      this.getTeachers = getTeachers;
+      this.getTeacherSubjects = getTeacherSubjects;
+
+      function getTeachers() {
+        if (teachers)
+          return teachers;
+        teachers = $http.get('api/teachers');
+        return teachers;
       };
+
+      function getTeacherSubjects(teacherId) {
+        return $http.get('api/teacher/' + teacherId);
+      }
     }])
 })(window.angular);
 
