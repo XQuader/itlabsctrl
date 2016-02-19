@@ -1,6 +1,7 @@
 var express    = require('express');
 var bodyParser = require('body-parser');
 var fs         = require('fs');
+var db         = require('./db');
 
 var app        = express();
 
@@ -13,12 +14,13 @@ var router = express.Router();
 
 router.get('/teachers', function(req, res) {
   console.log('Called GET teachers');
-  fs.readFile('../api/teachers.json', function(err, data) {
-    if (err)
-      res.end('File not found');
-    else
-      res.json(JSON.parse(data.toString()));
-  });
+  db.any("select first_name, last_name from person")
+    .then(function (data) {
+      res.json(data);
+    })
+    .catch(function (error) {
+      res.end(error);
+    });
 });
 
 
