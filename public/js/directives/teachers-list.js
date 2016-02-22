@@ -5,7 +5,9 @@
       return {
         scope: {
           list: '=',
-          click: '='
+          click: '&',
+          add:  '&',
+          del:  '&'
         },
         restrict: 'E',
         templateUrl: 'src/teachers/teachers-list.html',
