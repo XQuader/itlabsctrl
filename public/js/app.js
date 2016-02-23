@@ -1,4 +1,4 @@
-(function(angular) {
-  'use strict';
-  angular.module('itLabsControl', ['ngRoute', 'itLabsControl.directives', 'itLabsControl.teachers'])
+(function (angular) {
+    'use strict';
+    angular.module('itLabsControl', ['ngRoute', 'itLabsControl.directives', 'itLabsControl.teachers'])
 })(window.angular);

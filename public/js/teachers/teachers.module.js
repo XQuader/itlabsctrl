@@ -1,4 +1,4 @@
-(function(angular) {
-  'use strict';
-  angular.module('itLabsControl.teachers', [])
+(function (angular) {
+    'use strict';
+    angular.module('itLabsControl.teachers', [])
 })(window.angular);

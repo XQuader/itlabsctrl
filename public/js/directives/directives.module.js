@@ -1,4 +1,4 @@
-(function(angular) {
-  'use strict';
-  angular.module('itLabsControl.directives', [])
+(function (angular) {
+    'use strict';
+    angular.module('itLabsControl.directives', [])
 })(window.angular);
