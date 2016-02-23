@@ -10,17 +10,17 @@
 
       function getSubjects (id) {
         $location.path('/teacher/' + id);
-      };
+      }
 
       function addTeacher (newTeacher) {
         Teachers.addTeacher(newTeacher);
         update();
-      };
+      }
 
       function deleteTeacher (id) {
         Teachers.deleteTeacher(id);
         update();
-      };
+      }
 
       function update () {
         Teachers.getTeachers().then(function(response) {

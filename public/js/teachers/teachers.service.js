@@ -12,7 +12,7 @@
       function getTeachers() {
         teachers = $http.get('api/teachers');
         return teachers;
-      };
+      }
 
       function getTeacherSubjects(teacherId) {
         return $http.get('api/teacher/' + teacherId);

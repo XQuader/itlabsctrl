@@ -5,12 +5,12 @@
       return {
         scope: {
           list: '=',
-          click: '&',
-          add:  '&',
-          del:  '&'
+          onClick: '&',
+          addElement:  '&',
+          deleteElement:  '&'
         },
         restrict: 'E',
-        templateUrl: 'src/teachers/teachers-list.html',
+        templateUrl: 'src/teachers/teachers-list.html'
       };
     })
 })(window.angular);
