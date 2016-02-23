@@ -10,13 +10,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="element in list">
-                    <td ng-click="onClick({id:element.id})">{{$index + 1}}</td>
-                    <td ng-click="onClick({id:element.id})">{{element.first_name}}</td>
-                    <td ng-click="onClick({id:element.id})">{{element.last_name}}</td>
+                <tr ng-repeat="item in list">
+                    <td ng-click="onClick({id:item.id})">{{$index + 1}}</td>
+                    <td ng-click="onClick({id:item.id})">{{item.first_name}}</td>
+                    <td ng-click="onClick({id:item.id})">{{item.last_name}}</td>
                     <td>
-                        <button type="button" ng-click="deleteElement({id:element.id})" class="glyphicon glyphicon-ban-circle"></button>
-                        <button type="button" ng-click="addElement({newTeacher:element})" class="glyphicon glyphicon-duplicate"></button>
+                        <button type="button" ng-click="deleteItem({id:item.id})" class="glyphicon glyphicon-ban-circle"></button>
+                        <button type="button" ng-click="addItem({newTeacher:item})" class="glyphicon glyphicon-duplicate"></button>
                     </td>
                 </tr>
             </tbody>

@@ -14,7 +14,7 @@ var router = express.Router();
 router.route('/teachers')
   .get(function (req, res) {
     console.log('Called GET teachers');
-    db.any('select id, first_name, last_name from person')
+    db.any('select * from person')
       .then(function (data) {
         res.json(data);
       })
@@ -28,7 +28,7 @@ router.route('/teachers')
   })
   .post(function (req, res) {
     console.log('Called POST teacher');
-    db.none('insert into person ( first_name, last_name, birth, sex) values( $1, $2, $3, $4)', ["asd", "asd", "10-10-2012", 1])
+    db.none('insert into person (first_name, last_name, birth, sex) values($1, $2, $3, $4)', [req.body.first_name, req.body.last_name, req.body.birth, req.body.sex])
       .then(function (data) {
         res.json({
           success: true,

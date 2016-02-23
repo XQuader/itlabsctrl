@@ -6,8 +6,8 @@
         scope: {
           list: '=',
           onClick: '&',
-          addElement:  '&',
-          deleteElement:  '&'
+          addItem:  '&',
+          deleteItem:  '&'
         },
         restrict: 'E',
         templateUrl: 'src/teachers/teachers-list.html'
