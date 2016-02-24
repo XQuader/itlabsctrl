@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>IT Labs Control</title>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="app/app.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="bower_components/respond/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+    <script src="bower_components/ng-file-upload/ng-file-upload-shim.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/app.routes.js"></script>
+
+    <script src="app/teachers/teachers.module.js"></script>
+    <script src="app/teachers/teachers.service.js"></script>
+    <script src="app/teachers/teachers.controller.js"></script>
+
+    <script src="app/directives/directives.module.js"></script>
+    <script src="app/directives/teachers-list.js"></script>
+    <script src="app/directives/navbar.js"></script>
+
+    <script src="app/editor/editor.module.js"></script>
+    <script src="app/editor/editor.controller.js"></script>
+</head>
+<body ng-app="itLabsControl">
+    <navbar></navbar>
+    <div class="view" ng-view></div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

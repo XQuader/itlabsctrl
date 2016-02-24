@@ -1,0 +1,21 @@
+<form name="editForm">
+    <textarea name="sourceText" cols="80" rows="5"></textarea>
+</form>
+<form name="uploadForm">
+    <fieldset>
+        <input type="file" ngf-select ng-model="sourceFile" name="file"
+               ngf-max-size="100KB" required
+               ngf-model-invalid="errorFiles">
+        <i ng-show="uploadForm.file.$error.required">*required</i><br>
+        <i ng-show="uploadForm.file.$error.maxSize">File too large: max 100KB</i>
+        <button ng-disabled="!uploadForm.$valid"
+                ng-click="upload(sourceFile)">Upload
+        </button>
+        <span class="progress" ng-show="sourceFile.progress >= 0">
+            <div style="width:{{sourceFile.progress}}%"
+                 ng-bind="sourceFile.progress + '%'"></div>
+        </span>
+        <span ng-show="sourceFile.result">Upload Successful</span>
+        <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+    </fieldset>
+</form>
