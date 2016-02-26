@@ -1,5 +1,6 @@
 (function (angular) {
     'use strict';
+
     angular.module('itLabsControl.directives')
         .directive('teachersList', function () {
             return {
@@ -10,7 +11,7 @@
                     deleteItem: '&'
                 },
                 restrict: 'E',
-                templateUrl: 'app/directives/teachers-list.html'
+                templateUrl: 'app/directives/teachers-list/teachers-list.html'
             };
         })
 })(window.angular);

@@ -1,5 +1,6 @@
 (function (angular) {
     'use strict';
+
     angular.module('itLabsControl.teachers')
         .service('Teachers', ['$http', function ($http) {
             var teachers = null;

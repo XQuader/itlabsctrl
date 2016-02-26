@@ -1,5 +1,6 @@
 (function (angular) {
     'use strict';
+
     angular.module('itLabsControl.editor')
         .controller('EditorCtrl', ['$scope', '$timeout', '$http', 'Upload', function ($scope, $timeout, $http, Upload) {
             $scope.upload = upload;
@@ -14,7 +15,7 @@
                     url: '/api/upload',
                     data: {
                         id: 1,
-                        mode: "cpp"
+                        mode: 'cpp'
                     },
                     file: file[type]
                 });

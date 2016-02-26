@@ -57,6 +57,7 @@ router.route('/teachers')
 router.route('/teacher/:id')
     .get(function (req, res) {
         'use strict';
+
         console.log('Called GET teacher details');
         db.any('select subject.name from subject ' +
                 'inner join person_subject on (subject.id = person_subject.subject)' +
@@ -75,6 +76,7 @@ router.route('/teacher/:id')
     })
     .delete(function (req, res) {
         'use strict';
+
         console.log('Called DELETE teacher');
         db.none('delete from person where person.id = $1', req.params.id)
             .then(function (data) {
@@ -95,6 +97,7 @@ router.route('/teacher/:id')
 router.route('/upload')
     .post(multipartyMiddleware, function (req, res) {
         'use strict';
+
         console.log('Upload file or source');
         if (req.body.file) {
             var name = Math.random().toString().replace('0.','') + '.cpp';

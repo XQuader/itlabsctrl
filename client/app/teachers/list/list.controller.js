@@ -1,7 +1,8 @@
 (function (angular) {
     'use strict';
+
     angular.module('itLabsControl.teachers')
-        .controller('TeachersCtrl', ['$scope', '$location', 'Teachers', function ($scope, $location, Teachers) {
+        .controller('TeachersListCtrl', ['$scope', '$location', 'Teachers', function ($scope, $location, Teachers) {
             $scope.getSubjects = getSubjects;
             $scope.addTeacher = addTeacher;
             $scope.deleteTeacher = deleteTeacher;
@@ -28,11 +29,5 @@
                 });
             }
         }])
-
-        .controller('TeacherDetailCtrl', ['$scope', '$routeParams', 'Teachers', function ($scope, $routeParams, Teachers) {
-            Teachers.getTeacherSubjects($routeParams.id).then(function (response) {
-                $scope.subjects = response.data;
-            });
-        }]);
 })(window.angular);
 
