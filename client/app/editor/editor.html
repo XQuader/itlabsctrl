@@ -1,21 +1,32 @@
-<form name="editForm">
-    <textarea name="sourceText" cols="80" rows="5" ng-model="source.text"></textarea>
-</form>
-<form name="uploadForm">
-    <fieldset>
-        <input type="file" ngf-select ng-model="sourceFile" name="file"
-               ngf-max-size="100KB" required
-               ngf-model-invalid="errorFiles">
-        <i ng-show="uploadForm.file.$error.required">*required</i><br>
-        <i ng-show="uploadForm.file.$error.maxSize">File too large: max 100KB</i>
-        <button ng-disabled="!uploadForm.$valid"
-                ng-click="upload(sourceFile)">Upload
+<link href="app/editor/editor.css" rel="stylesheet">
+
+<div class="editor">
+    <form name="editForm" role="form" name="edit">
+        <div class="ace_editor" ui-ace="{ onLoad : aceLoaded }" ng-model="source.text"></div>
+        <button ng-disabled="!editForm.$valid || !source.text || source.text.length > 1e5"
+                ng-click="upload(source, 'text')">Send source
         </button>
-        <span class="progress" ng-show="sourceFile.progress >= 0">
-            <div style="width:{{sourceFile.progress}}%"
-                 ng-bind="sourceFile.progress + '%'"></div>
-        </span>
-        <span ng-show="sourceFile.result">Upload Successful</span>
-        <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
-    </fieldset>
-</form>
+    </form>
+    <br>
+
+    <form name="uploadForm" role="form" class="form-inline">
+        <fieldset>
+            <input type="file" name="file"
+                   ng-click="errorMsg=null; source.result=null"
+                   ngf-select ng-model="source.file"
+                   ngf-max-size="100KB" required
+                   ngf-model-invalid="errorFiles">
+
+            <p ng-show="uploadForm.file.$error.maxSize">File too large: max 100KB</p>
+            <button ng-disabled="!uploadForm.$valid"
+                    ng-click="upload(source, 'file')">Upload file
+            </button>
+            <span class="progress" ng-show="source.progress >= 0 && source.progress < 100 && !errorMsg">
+                <div style="width:{{source.progress}}%"
+                     ng-bind="source.progress + '%'"></div>
+            </span>
+            <span ng-show="source.result">Upload Successful</span>
+            <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
+        </fieldset>
+    </form>
+</div>

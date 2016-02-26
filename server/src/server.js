@@ -1,8 +1,18 @@
-var express    = require('express');
-var bodyParser = require('body-parser');
-var db         = require('./db');
+var express     = require('express');
+var bodyParser  = require('body-parser');
+var db          = require('./db');
+var fs          = require('fs');
+var path        = require('path');
+var multiparty  = require('connect-multiparty');
+
+var multipartyMiddleware = multiparty({ uploadDir: 'uploads' });
 
 var app         = express();
+
+fs.mkdir('uploads', (err) => {
+    "use strict";
+    console.log(err);
+})
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -82,6 +92,22 @@ router.route('/teacher/:id')
             });
     });
 
+router.route('/upload')
+    .post(multipartyMiddleware, function (req, res) {
+        'use strict';
+        console.log('Upload file or source');
+        if (req.body.file) {
+            var name = Math.random().toString().replace('0.','') + '.cpp';
+            var file = fs.createWriteStream('uploads/' + name);
+            file.write(req.body.file);
+            file.end(() => {
+                console.log('Source saved under \\'+ path.normalize('uploads\\' + name));
+            });
+        } else {
+            console.log('File saved under \\' + path.normalize(req.files.file.path));
+        }
+        res.end('OK');
+    });
 
 app.use('/api', router);
 
