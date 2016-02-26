@@ -1,0 +1,28 @@
+{
+    "name": "itLabsControl",
+    "homepage": "https://github.com/XQuader/itlabsctrl",
+    "description": "IT Labs Control is an online judge system for organization and validation of laboratory works in programming.",
+    "main": "index.html",
+    "moduleType": [],
+    "authors": [
+        "XQuader"
+    ],
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "devDependencies": {
+        "bootstrap": "^3.3.6",
+        "angular": "^1.5.0",
+        "angular-route": "^1.5.0",
+        "ng-file-upload": "^12.0.1",
+        "html5shiv": "^3.7.3",
+        "respond": "^1.4.2",
+        "angular-ui-ace": "bower"
+    }
+}
