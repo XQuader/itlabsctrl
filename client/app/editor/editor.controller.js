@@ -14,7 +14,7 @@
                     url: '/api/upload',
                     data: {
                         id: 1,
-                        mode: "cpp",
+                        mode: "cpp"
                     },
                     file: file[type]
                 });

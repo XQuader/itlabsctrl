@@ -1,7 +1,7 @@
 <link href="app/editor/editor.css" rel="stylesheet">
 
 <div class="editor">
-    <form name="editForm" role="form" name="edit">
+    <form name="editForm" role="form">
         <div class="ace_editor" ui-ace="{ onLoad : aceLoaded }" ng-model="source.text"></div>
         <button ng-disabled="!editForm.$valid || !source.text || source.text.length > 1e5"
                 ng-click="upload(source, 'text')">Send source
