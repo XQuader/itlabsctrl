@@ -6,7 +6,7 @@
             $routeProvider
                 .when('/', {
                     templateUrl: 'app/teachers/list/list.html',
-                    controller: "TeachersListCtrl"
+                    controller: 'TeachersListCtrl'
                 })
                 .when('/teacher/:id', {
                     templateUrl: 'app/teachers/subjects/subjects.html',

@@ -10,7 +10,8 @@ var multipartyMiddleware = multiparty({ uploadDir: 'uploads' });
 var app         = express();
 
 fs.mkdir('uploads', (err) => {
-    "use strict";
+    'use strict';
+
     console.log(err);
 })
 
